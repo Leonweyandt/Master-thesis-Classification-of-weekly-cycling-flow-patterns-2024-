@@ -35,19 +35,17 @@ File 01: Install of needed packages for the cluster analysis
 
 Files 02: Load and enter of data 
 
-   02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023in Hessen (Germany)
-   
-   02_02: Load the daily count data of the bicycle counting stations for the years 2022 and 2023
-   
-   02_03: Load the daily weather data at the bicycle counting stations for the years 2022 and 2023 
-      02_03_01: Standardize the data structure of the excel files with the weather data before loading them in R
-      02_03_02: Load the standardized excel files in R
-      02_03_03: Analyze the influence of daily weather on the count data to determine filter values to clean the data set
+   - 02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023in Hessen (Germany)
+   - 02_02: Load the daily count data of the bicycle counting stations for the years 2022 and 2023
+   - 02_03: Load the daily weather data at the bicycle counting stations for the years 2022 and 2023
+      - 02_03_01: Standardize the data structure of the excel files with the weather data before loading them in R
+      - 02_03_02: Load the standardized excel files in R
+      - 02_03_03: Analyze the influence of daily weather on the count data to determine filter values to clean the data set
 Files 03: Cluster analysis and validation
-      03_01: Method 1: Cluster analysis using set day values for each counting station:
+      - 03_01: Method 1: Cluster analysis using set day values for each counting station:
          Loop through the count data and determine the combination of counting stations which have the same amount of daily count values with the highest value.
-      03_02: Method 2: Cluster analysis using all day values for each counting station
-         03_02_01: Filter the data and executing the cluster analysis 
+      - 03_02: Method 2: Cluster analysis using all day values for each counting station
+         - 03_02_01: Filter the data and executing the cluster analysis 
             1. First filtering of the data:
                - remove NA-Values
                - remove days in holidays and vacation periods
@@ -69,10 +67,10 @@ Files 03: Cluster analysis and validation
                - loop the kmeans cluster analysis with 100 iterations and save the result with the highest average silhouette width (parameter for the stability of the results)
                - save and plot the values of the weekly flow patterns for each cluster group
                - analyze weekly flow patterns without a segure distribution to the groups and decide to remove them from analysis or not              
-         03_02_02: Validation of the results of the cluster analysis:
+         - 03_02_02: Validation of the results of the cluster analysis:
             - Calculate the Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
             - evaluate the quality of the cluster analysis and compare it at different kind of processes
-         03_02_02: Test of the stability of the results of the cluster analysis
+         - 03_02_02: Test of the stability of the results of the cluster analysis
             - loop with 100 iteration which splits data set in half and performs the whole cluster analysis with filtering of the data and calculation of the typical weekly flow patterns
             - save all results in one table
             - plot all results and exermine the variance of the results to evaluete the stability and quality of the result of the cluster analysis      
