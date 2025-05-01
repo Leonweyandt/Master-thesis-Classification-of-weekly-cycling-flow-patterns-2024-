@@ -32,9 +32,13 @@ File 01: Creating figures to explain basic concepts and methods of the analysis
 Folder Typisierung:
 
 File 01: Install of needed packages for the cluster analysis
+
 Files 02: Load and enter of data 
+
    02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023in Hessen (Germany)
+   
    02_02: Load the daily count data of the bicycle counting stations for the years 2022 and 2023
+   
    02_03: Load the daily weather data at the bicycle counting stations for the years 2022 and 2023 
       02_03_01: Standardize the data structure of the excel files with the weather data before loading them in R
       02_03_02: Load the standardized excel files in R
