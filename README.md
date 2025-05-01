@@ -7,6 +7,7 @@ purposes based on the results. In the following the code to prepare, filter and 
 
 
 Folder MiD Datensauswertung
+
 File 01: Analyzing the data of MiD (Mobilität in Deutschland). 
    - load selected columns of the data set "MiD"
    - remove data which is not needed in the analyze and rename columns and data
@@ -21,6 +22,7 @@ File 01: Analyzing the data of MiD (Mobilität in Deutschland).
 
 
 Folder Other figures:
+
 File 01: Creating figures to explain basic concepts and methods of the analysis
    - Skewness of data sets
    - Dendrograms
@@ -28,6 +30,7 @@ File 01: Creating figures to explain basic concepts and methods of the analysis
      
         
 Folder Typisierung:
+
 File 01: Install of needed packages for the cluster analysis
 Files 02: Load and enter of data 
    02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023in Hessen (Germany)
@@ -72,6 +75,7 @@ Files 03: Cluster analysis and validation
 
 
 Folder Spatial analysis
+
 File 01: Spatial analysis of the distribution of the counting stations to the cluster groups with typical weekly flow pattern
    - load the data, remove counting stations which was not grouped and general settings like the plot colors
    - analyze the relation of the cluster grouos with different spatial parameters and plot the results:
