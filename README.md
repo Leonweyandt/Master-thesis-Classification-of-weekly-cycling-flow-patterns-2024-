@@ -30,7 +30,7 @@ File 01: Creating figures to explain basic concepts and methods of the analysis
    - Scree-plots<br/><br/>
 
      
-Folder Typisierung:
+Folder Clustering:
 
 File 01: Install of needed packages for the cluster analysis
 
