@@ -55,8 +55,9 @@ Files 03: Cluster analysis and validation
            - perform kmeans clustering with 1000 iterations and save the result with the highest average silhouette width (parameter for the stability of the cluster distribution)
            - save and plot the values of the weekly flow patterns for all methods of cluster analyses and the k-means clustering
            - plot the weekly flow patterns of the members of each cluster group
-           - save results in excel file for further analyses in QGIS
-           - analyze weekly flow patterns with low silhouette score and decide to remove them from analysis or not
+           - save results in excel file for further analyses in QGIS 
+         7. other analyses:
+           - analyze weekly flow patterns with low silhouette score and decide to remove them from analysis or not#
            - plot number of counting stations per minimal amount of count data per day of the week  
      - 03_02_02: Validation of the results of the cluster analysis:
            - calculate the Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
