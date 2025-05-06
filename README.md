@@ -6,22 +6,6 @@ network in Hessen which was built in 2022 and consists of 274 counting stations 
 purposes based on the results. It follows a brieve discription of the R-code used to prepare, filter and analyze the data:<br/><br/>
 
 
-
-Folder MiD Datensauswertung
-
-File 01: Analyzing the data of MiD (Mobilität in Deutschland). 
-   - load selected columns of the data set "MiD"
-   - remove data which is not needed in the analyze and rename columns and data
-   - general settings, like setting the order of days and trip purposes and the color of the plots
-   - performing different analysis and plot the results
-      - weekly flow patterns ~ trip purposes (summed counts)
-      - weekly flow patterns ~ trip purposes (relational counts)
-      - weekly flow patterns ~ detailed leisure transport
-      - daily weather ~ trip purposes
-      - track length ~ trip purposes
-      - track length of pupils ~ percentage of tracks<br/><br/>
-      
-
 Folder Other figures:
 
 File 01: Creating figures to explain basic concepts and methods of the analysis
