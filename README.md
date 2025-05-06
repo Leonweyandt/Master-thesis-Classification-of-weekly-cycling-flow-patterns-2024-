@@ -6,7 +6,7 @@ network in Hessen which was built in 2022 and consists of 274 counting stations 
 purposes based on the results. It follows a brieve discription of the R-code used to prepare, filter and analyze the data:<br/><br/>
 
 
-Folder Other figures:
+Folder "Other figures":
 
 File 01: Creating figures to explain basic concepts and methods of the analysis
    - skewness of data sets
@@ -14,7 +14,7 @@ File 01: Creating figures to explain basic concepts and methods of the analysis
    - scree plots<br/><br/>
 
      
-Folder Clustering:
+Folder "Clustering":
 
 File 01: Install packages for the cluster analysis
 
@@ -66,7 +66,7 @@ Files 03: Cluster analysis and validation
            - save all results in one table
            - plot all results and determine the variance of the results to evaluete the stability and quality of the result of the cluster analysis<br/><br/>     
 
-Folder Spatial analysis
+Folder "Spatial analysis"
 
 File 01: Spatial analysis of the distribution of the counting stations to the cluster groups with typical weekly flow pattern
    - load the data, remove counting stations which was not grouped and general settings like the plot colors
