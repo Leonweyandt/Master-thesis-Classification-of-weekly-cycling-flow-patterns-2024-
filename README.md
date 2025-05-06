@@ -34,7 +34,7 @@ Files 02: Load and prepare data
 Files 03: Cluster analysis and validation
    - 03_01: Method 1: Cluster analysis using set day values for each counting station:
       Loop through the data and determine the highest number of counting stations which have the same dates of the count data
-   - 03_02: Method 2: Cluster analysis using the whole count data for each counting station
+   - 03_02: Method 2: Cluster analysis using the whole count data for each counting station<br/>
      - 03_02_01: Filter the data and execute the cluster analysis
         1. Filter the data:
            - remove NA-Values
@@ -58,10 +58,10 @@ Files 03: Cluster analysis and validation
            - save results in excel file for further analyses in QGIS 
         7. other analyses:
            - analyze weekly flow patterns with low silhouette score and decide to remove them from analysis or not
-           - plot number of counting stations per minimal amount of count data per day of the week 
+           - plot number of counting stations per minimal amount of count data per day of the week <br/>
      - 03_02_02: Validation of the results of the cluster analysis:
        - calculate  Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
-       - plot the silhouette widths of the cluster result 
+       - plot the silhouette widths of the cluster result <br/>
      - 03_02_02: Test the stability of the results of the cluster analysis:
        - repeat 100 times splitting the data in half and performing the whole cluster analysis with the calculation of the typical weekly flow patterns
        - save all results in one table
