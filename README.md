@@ -9,57 +9,62 @@ purposes based on the results. It follows a brieve discription of the R-code use
 Folder Other figures:
 
 File 01: Creating figures to explain basic concepts and methods of the analysis
-   - Skewness of data sets
-   - Dendrograms
-   - Scree-plots<br/><br/>
+   - skewness of data sets
+   - dendrograms
+   - scree plots<br/><br/>
 
      
 Folder Clustering:
 
-File 01: Install of needed packages for the cluster analysis
+File 01: Install packages for the cluster analysis
 
-Files 02: Load and enter of data 
+Files 02: Load and prepare data 
 
-   - 02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023in Hessen (Germany)
+   - 02_01: Enter the dates of holidays and vacation days for the years 2022 and 2023 in Hessen (Germany)
    - 02_02: Load the daily count data of the bicycle counting stations for the years 2022 and 2023
    - 02_03: Load the daily weather data at the bicycle counting stations for the years 2022 and 2023
-      - 02_03_01: Standardize the data structure of the excel files with the weather data before loading them in R
-      - 02_03_02: Load the standardized excel files in R
-      - 02_03_03: Analyze the influence of daily weather on the count data to determine filter values to clean the data set
+      - 02_03_01: Load the excel files in R
+      - 02_03_02: Analyze the influence of weather parameters on the count data to determine filter values for the cleaning of the data set
+           - Boxplot: count data ~ average daily temperature
+           - Boxplot: count data ~ amount of snow fall
+           - Boxplot: count data ~ humidity
+           - Boxplot: count data ~ wind speed
+           - Boxplot: count data ~ amount of rain
+
 Files 03: Cluster analysis and validation
    - 03_01: Method 1: Cluster analysis using set day values for each counting station:
-         Loop through the count data and determine the combination of counting stations which have the same amount of daily count values with the highest value.
-   - 03_02: Method 2: Cluster analysis using all day values for each counting station
-     - 03_02_01: Filter the data and executing the cluster analysis
-        1. First filtering of the data:
+      Loop through the data and determine the highest number of counting stations which have the same dates of the count data
+   - 03_02: Method 2: Cluster analysis using the whole count data for each counting station
+     - 03_02_01: Filter the data and execute the cluster analysis
+        1. Filter the data:
            - remove NA-Values
            - remove days in holidays and vacation periods
            - remove days with average temperatues under 10 °C and with snowfall
-           - remove days with unexpected high or low counts are removed by the adjusted boxplot method
-           - remove counting station with a median of unter 10 over all days of the week or with a median of 0 on one day of the week
+           - remove days with unexpected high or low counts with the method "adjusted boxplot"
+           - remove counting station with a median of unter 10 over the whole data or with a median of 0 on one day of the week
            - remove counting stations which doesnt have more than 8 count data on each day of the week
-        2. Determine median weekly flow patterns for each counting station with the median of the dayly counts for each day of the week
+        2. Determine median weekly flow patterns for each counting station with the median of the daily counts for each day of the week
         3. Analyze the weekly flow patterns for the counting stations with the single linkage cluster analysis. Calculate euclidean distance and build groups of similar weekly flow patterns.
         4. Second filtering of the data: 
            - remove counting stations with an euclidean distance over 0.01 
            - remove counting stations with an euclidean distance of over 0.01 and unusueal weekly flow patterns
-        5. Hierarchical cluster analysis:
-           - Perform different types of hierarchical cluster analysis
-           - plot the results of the cluster analysises in a dendrogram
-           - determine the ideal number of cluster groups with the dendrogram
-        6. Kmeans cluster analysis:
-           - loop the kmeans cluster analysis with 100 iterations and save the result with the highest average silhouette width (parameter for the stability of the results)
-           - save and plot the values of the weekly flow patterns for each cluster group
-           - analyze weekly flow patterns without a segure distribution to the groups and decide to remove them from analysis or not              
+        5. Hierarchical cluster analysiés:
+           - perform different types of hierarchical cluster analyses
+           - plot the results of the cluster analyses in dendrograms and scree plots to determine the ideal number of cluster groups
+        6. K-means clustering:
+           - perform kmeans clustering with 1000 iterations and save the result with the highest average silhouette width (parameter for the stability of the cluster distribution)
+           - save and plot the values of the weekly flow patterns for all methods of cluster analyses and the k-means clustering
+           - plot the weekly flow patterns of the members of each cluster group
+           - save results in excel file for further analyses in QGIS
+           - analyze weekly flow patterns with low silhouette score and decide to remove them from analysis or not
+           - plot number of counting stations per minimal amount of count data per day of the week  
      - 03_02_02: Validation of the results of the cluster analysis:
-           - Calculate the Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
-           - evaluate the quality of the cluster analysis and compare it at different kind of processes
+           - calculate the Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
+           - plot the silhouette widths of the cluster result 
      - 03_02_02: Test of the stability of the results of the cluster analysis
-           - loop with 100 iteration which splits data set in half and performs the whole cluster analysis with filtering of the data and calculation of the typical weekly flow patterns
+           - repeat 100 times splitting the data in half and performing the whole cluster analysis with the calculation of the typical weekly flow patterns
            - save all results in one table
-           - plot all results and exermine the variance of the results to evaluete the stability and quality of the result of the cluster analysis<br/><br/>     
-
-
+           - plot all results and determine the variance of the results to evaluete the stability and quality of the result of the cluster analysis<br/><br/>     
 
 Folder Spatial analysis
 
@@ -67,11 +72,10 @@ File 01: Spatial analysis of the distribution of the counting stations to the cl
    - load the data, remove counting stations which was not grouped and general settings like the plot colors
    - analyze the relation of the cluster grouos with different spatial parameters and plot the results:
       - cluster group ~ RegioStaRGem5
-      - cluster group ~ distance to schools
-      - cluster group ~ distance to schools in urban area
-      - cluster group ~ distance to river
+      - cluster group ~ distance to closest secondary school      
+      - cluster group ~ distance to closest river
+      - cluster group ~ type of way
       - cluster group ~ population density in surrounding 1 km raster cell
-      - cluster group ~ track type normal and in percentage
-      - cluster group ~ distance urban area
-      - cluster group ~ net category of bicycle track
+      - cluster group ~ distance to urban area
+      - cluster group ~ net category of bicycle way
      
