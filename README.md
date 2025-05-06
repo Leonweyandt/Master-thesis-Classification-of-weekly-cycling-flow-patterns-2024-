@@ -29,7 +29,7 @@ Files 02: Load and prepare data
            - Boxplot: count data ~ amount of snow fall
            - Boxplot: count data ~ humidity
            - Boxplot: count data ~ wind speed
-           - Boxplot: count data ~ amount of rain
+           - Boxplot: count data ~ amount of rain<br/><br/>
 
 Files 03: Cluster analysis and validation
    - 03_01: Method 1: Cluster analysis using set day values for each counting station:
