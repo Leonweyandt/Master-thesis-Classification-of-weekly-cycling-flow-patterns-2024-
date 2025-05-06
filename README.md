@@ -60,12 +60,12 @@ Files 03: Cluster analysis and validation
            - analyze weekly flow patterns with low silhouette score and decide to remove them from analysis or not
            - plot number of counting stations per minimal amount of count data per day of the week 
      - 03_02_02: Validation of the results of the cluster analysis:
-           - calculate the Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
-           - plot the silhouette widths of the cluster result 
-     - 03_02_02: Test of the stability of the results of the cluster analysis
-           - repeat 100 times splitting the data in half and performing the whole cluster analysis with the calculation of the typical weekly flow patterns
-           - save all results in one table
-           - plot all results and determine the variance of the results to evaluete the stability and quality of the result of the cluster analysis<br/><br/>     
+       - calculate  Rand-index, silhouette width and statistical parameters of the typical weekly flow patterns
+       - plot the silhouette widths of the cluster result 
+     - 03_02_02: Test the stability of the results of the cluster analysis:
+       - repeat 100 times splitting the data in half and performing the whole cluster analysis with the calculation of the typical weekly flow patterns
+       - save all results in one table
+       - plot all results and determine the variance of the results to evaluete the stability and quality of the result of the cluster analysis<br/><br/>     
 
 Folder "Spatial analysis"
 
